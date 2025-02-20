@@ -1,6 +1,13 @@
 .key_text{
     color:black;
+    display: block;
+    white-space: nowrap;
+    font-size: 10px;
+    transform-origin: 0px 0px;
 }
 .key{
     fill: white;
+    cursor: default;
+    overflow: hidden;
+    
 }

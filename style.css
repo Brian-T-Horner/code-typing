@@ -1,4 +1,4 @@
-.key_text{
+/* .key_text{
     color:black;
     display: block;
     white-space: nowrap;
@@ -10,4 +10,13 @@
     cursor: default;
     overflow: hidden;
     
+} */
+
+
+rect {
+    transition: fill 0.2s ease;
+}
+
+rect.key {
+    fill: white !important;
 }

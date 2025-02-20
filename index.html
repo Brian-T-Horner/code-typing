@@ -9,18 +9,46 @@
     
 </head>
 <body>
-    <div class="keyboard" style="position: relative; left:0px; top:0px; transform:scale(1);">
+    <!-- TODO: Need to make metrics and keyboard start middle of the screen no matter what size-->
+    <div class = "metrics">
+        <span class = "metrics-text">Metrics:</span>
+        <div class="metrics-holder">
+            <span class="speed" title="Typing speed in the last lesson">
+                <span class="speed-text" style="box-sizing: border-box;">Speed:</span>
+                <span class="speed-metric">68.1wpm</span>
+                 (
+                <span class="speed-improvement" title="Difference form the average value">+16.5wpm</span>
+                )
+            </span>
+            <span class="accuracy" title="Percentage of characters typed without errors in last lesson.">
+                <span class ="accuracy-text" >Accuracy:</span>
+                <span class = "accuracy-metric">100%</span>
+                (
+                    <span class="accuracy-improvement" title="Difference from the average value">+3.04%</span>
+                )
+            </span>
+            <span class="score" title="Score of the lesson. Typing faster and without errors increases score.">
+                <span class = "score-text">Score:</span>
+                <span class = "socre-metric">23,423</span>
+                (
+                    <span class = "score-improvement" title="Difference from the average value">+16,745</span>
+                )
+            </span>
+        </div>
+    </div>
+    <div class="keyboard">
         <svg class="keyboard-svg" viewBox="0 0 628 228" height="16rem" style="aspect-ratio: 628 / 228;">
-            <rect class="keyboard_rectangle" x="0" y="0" width="628" height="228" rx="10" ry="10" fill="grey"></rect>
+            <rect class="keyboard-rectangle" x="0" y="0" width="628" height="228" rx="10" ry="10" fill="grey"></rect>
             <svg class="key-container" x="15" y="15" overflow="visible">
             </svg>
         </svg>
     </div>
     
     
+   
+    
+</body>
     <script type="text/javascript" src="keydetection.js"></script>
     <script type="text/javascript" src="keygen.js"></script>
-    
-</script>
-</body>
+    <script type="text/javascript" src="keyboardMovement.js"></script>
 </html>

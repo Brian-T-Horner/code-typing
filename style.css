@@ -12,6 +12,48 @@
     
 } */
 
+.metrics {
+    position:fixed;
+    transform: scale(1);
+    cursor: pointer;
+    top: 5%;
+    left:50%;
+    transform: translateX(-50%);
+    display: flex;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 0.4rem;
+    align-items: baseline;
+    background: rgb(255, 255, 255);
+    border-radius: 8px;
+}
+
+.metrics-holder {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding-inline: 1rem;
+    inline-size: auto;
+    box-sizing: border-box;
+}
+
+.speed, .accuracy, .score {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0.3rem;
+    white-space: nowrap;
+}
+
+
+.keyboard{
+    position:fixed;
+    transform:scale(1);
+    cursor: grab;
+    top: 35%;
+    left:25%;
+    display:flex;
+}
+
 
 rect {
     transition: fill 0.2s ease;

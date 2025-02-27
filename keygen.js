@@ -1,7 +1,7 @@
 // Define key properties: symbol, shifted symbol, x, y positions
 const keys = [
     // First row
-    { key: '`', shift: '~', x: 0,   y: 0, width: 38, code: 'Backquote' },
+    { key: '`', shift: '~', x: 0,   y: 0, width: 38, code: 'Escape' },
     { key: '1', shift: '!', x: 40,  y: 0, width: 38, code: 'Digit1' },
     { key: '2', shift: '@', x: 80,  y: 0, width: 38, code: 'Digit2' },
     { key: '3', shift: '#', x: 120, y: 0, width: 38, code: 'Digit3' },
@@ -42,7 +42,7 @@ const keys = [
     { key: 'K', shift: '', x: 350, y: 80, width: 38, code: 'KeyK'   },
     { key: 'L', shift: '', x: 390, y: 80, width: 38, code: 'KeyL'   },
     { key: ';', shift: ':', x: 430, y: 80, width: 38, code: 'Semicolon'   },
-    { key: '\'', shift: '"', x: 470, y: 80, width: 38, code: 'Qoute'   },
+    { key: '\'', shift: '"', x: 470, y: 80, width: 38, code: 'Quote'   },
     { key: 'Enter', shift: '', x: 510, y: 80, width: 88, code: 'Enter', textAlign: 'start'},
     // Fourth Row
     { key: 'Shift', shift: '', x: 0, y: 120, width: 88, code: 'ShiftLeft', textAlign: 'start'},

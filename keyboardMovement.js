@@ -4,7 +4,7 @@ let isDragging = false;
 
 //const keyboard = document.getElementById('keyboard');
 const keyboard = document.querySelector('.keyboard');
-console.log(keyboard);
+// console.log(keyboard);
 
 keyboard.addEventListener('mousedown', mouseDown);
 
@@ -30,8 +30,8 @@ function mouseMove(e){
     keyboard.style.top = (keyboard.offsetTop - newY) + 'px';
     keyboard.style.left = (keyboard.offsetLeft - newX) + 'px';
 
-    console.log({newX, newY});
-    console.log({startX, startY});
+    // console.log({newX, newY});
+    // console.log({startX, startY});
 
 }
 

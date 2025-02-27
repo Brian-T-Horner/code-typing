@@ -1,16 +1,6 @@
-/* .key_text{
-    color:black;
-    display: block;
-    white-space: nowrap;
-    font-size: 10px;
-    transform-origin: 0px 0px;
+body {
+    background-color: #333;
 }
-.key{
-    fill: white;
-    cursor: default;
-    overflow: hidden;
-    
-} */
 
 .metrics {
     position:fixed;
@@ -24,7 +14,6 @@
     box-sizing: border-box;
     padding: 0.4rem;
     align-items: baseline;
-    background: rgb(255, 255, 255);
     border-radius: 8px;
 }
 
@@ -42,6 +31,17 @@
     align-items: baseline;
     gap: 0.3rem;
     white-space: nowrap;
+}
+.stats {
+    color: grey;
+}
+
+.text {
+    color: white;
+}
+
+.improvement {
+    color: lightblue;
 }
 
 
@@ -61,4 +61,16 @@ rect {
 
 rect.key {
     fill: white !important;
+}
+
+.words-to-type{
+    font-weight: 400;
+    font-style: normal;
+}
+
+.words {
+    display: inline-block;
+    white-space: nowrap;
+    color: white;
+
 }

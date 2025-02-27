@@ -10,32 +10,51 @@
 </head>
 <body>
     <!-- TODO: Need to make metrics and keyboard start middle of the screen no matter what size-->
+     <!-- METRICS SECTION -->
     <div class = "metrics">
-        <span class = "metrics-text">Metrics:</span>
+        <span class = "metrics-text text">Metrics:</span>
         <div class="metrics-holder">
             <span class="speed" title="Typing speed in the last lesson">
-                <span class="speed-text" style="box-sizing: border-box;">Speed:</span>
-                <span class="speed-metric">68.1wpm</span>
+                <span class="speed-text text" style="box-sizing: border-box;">Speed:</span>
+                <span class="speed-metric stats">68.1wpm</span>
                  (
-                <span class="speed-improvement" title="Difference form the average value">+16.5wpm</span>
+                <span class="speed-improvement improvement" title="Difference form the average value">+16.5wpm</span>
                 )
             </span>
             <span class="accuracy" title="Percentage of characters typed without errors in last lesson.">
-                <span class ="accuracy-text" >Accuracy:</span>
-                <span class = "accuracy-metric">100%</span>
+                <span class ="accuracy-text text" >Accuracy:</span>
+                <span class = "accuracy-metric stats">100%</span>
                 (
-                    <span class="accuracy-improvement" title="Difference from the average value">+3.04%</span>
+                    <span class="accuracy-improvement improvement" title="Difference from the average value">+3.04%</span>
                 )
             </span>
             <span class="score" title="Score of the lesson. Typing faster and without errors increases score.">
-                <span class = "score-text">Score:</span>
-                <span class = "socre-metric">23,423</span>
+                <span class = "score-text text">Score:</span>
+                <span class = "socre-metric stats">23,423</span>
                 (
-                    <span class = "score-improvement" title="Difference from the average value">+16,745</span>
+                    <span class = "score-improvement improvement" title="Difference from the average value">+16,745</span>
                 )
             </span>
         </div>
     </div>
+    <!--- KEYS SECTION -->
+
+    <!-- CURRENT KEY SECTION -->
+    <!-- ACCURACY SECTION -->
+    <!-- DAILY GOAL SECTION -->
+    <!-- WORDS TO TYPE SECTION -->
+        <!--Need to make it so that the words to type and metrics section do not keep track when clicked off or delayed
+        Must also make it so the board resets after -->
+    <div class="typing-container">
+        <div class="lesson-display">Start Typing...</div>
+        </div>
+    <!-- <div class="word-to-type" dir="ltr">
+        <span class="words">
+            <span class="letter">v</span>
+            <span class="letter">ampires.</span>
+        </span>
+    </div> -->
+    <!-- KEYBOARD SECTION -->
     <div class="keyboard">
         <svg class="keyboard-svg" viewBox="0 0 628 228" height="16rem" style="aspect-ratio: 628 / 228;">
             <rect class="keyboard-rectangle" x="0" y="0" width="628" height="228" rx="10" ry="10" fill="grey"></rect>
@@ -43,6 +62,8 @@
             </svg>
         </svg>
     </div>
+
+    <!-- NAV BAR -->
     
     
    
@@ -51,4 +72,7 @@
     <script type="text/javascript" src="keydetection.js"></script>
     <script type="text/javascript" src="keygen.js"></script>
     <script type="text/javascript" src="keyboardMovement.js"></script>
+    <!-- <script type="module" src="config.js"></script>
+    <script type="module" src="codescrapper.js"></script> -->
+    <script type="text/javascript" src="wordgenerator.js"></script>
 </html>

@@ -79,13 +79,14 @@ def generate_paradigms(min_count, max_count, lesson_plan = None):
 
 
 
-def collate(words, punc, paradigm, count = 20, w_weight = 0.5, punc_weight = 0.2, para_weight = 0.3):
+def collate(words, punc, paradigm, count = 20, w_weight = 3, punc_weight = 1, para_weight = 3):
     word_index, punc_index, para_index = 0, 0, 0
     word_len, punc_len, para_len = len(words), len(punc), len(paradigm)
     res = []
+    #TODO: fix because it is only returning paradigms
     for _ in range(count):
         # Generating a random choice of word, punc or para to add to result
-        choice = random.choices(['word', 'punc', 'para'], weights = [w_weight, punc_weight, para_weight])
+        choice = random.choices(['para', 'punc', 'word'], weights = [para_weight, punc_weight, w_weight], k=1)
         #TODO need a better way to fix index out of bounds when running out of certain ones
         if choice == 'word':
             res.append(words[word_index])

@@ -5,9 +5,16 @@ import nltk
 from nltk.corpus import words as nltk_words
 from itertools import islice
 
+
+
 nltk.download('words')
 app = Flask(__name__)
 CORS(app)
+
+#TODO: lesson plan as a dictionary? {f:1, j:1, g:0, h:0} etc
+# TODO filter for letters in a dictionary? maybe a different data structure for it?
+# TODO word tree of generated things and search it to see if all letters are included? or no mis ranking ones?
+
 
 punctuation = ['.', ',', '?', '/', '//', ';', ':', "'", '/', 
                '"', '[', ']', '{', '}', '|', '_', '-', '+', 
@@ -79,14 +86,15 @@ def generate_paradigms(min_count, max_count, lesson_plan = None):
 
 
 
-def collate(words, punc, paradigm, count = 20, w_weight = 3, punc_weight = 1, para_weight = 3):
+def collate(words, punc, paradigm, count = 15, w_weight = 3, punc_weight = 1, para_weight = 3):
     word_index, punc_index, para_index = 0, 0, 0
     word_len, punc_len, para_len = len(words), len(punc), len(paradigm)
     res = []
     #TODO: fix because it is only returning paradigms
     for _ in range(count):
         # Generating a random choice of word, punc or para to add to result
-        choice = random.choices(['para', 'punc', 'word'], weights = [para_weight, punc_weight, w_weight], k=1)
+        choice = random.choices(['para', 'punc', 'word'], weights = [para_weight, punc_weight, w_weight], k=1)[0]
+
         #TODO need a better way to fix index out of bounds when running out of certain ones
         if choice == 'word':
             res.append(words[word_index])
@@ -98,8 +106,7 @@ def collate(words, punc, paradigm, count = 20, w_weight = 3, punc_weight = 1, pa
             punc_index += 1
             if punc_index == punc_len:
                 punc_index = random.randint(0, punc_len-1)
-            
-        else:
+        elif choice == 'para':
             res.append(paradigm[para_index])
             para_index += 1
             if para_index == para_len:
@@ -111,5 +118,8 @@ if __name__ == "__main__":
     words = generate_words(1, 10, 20)
     punc = generate_punctuation(1, 10)
     paradigm = generate_paradigms(1, 20)
+    # print(f"words are {words}")
+    # print(f"Punc are {punc}")
+    # print(f"Paradigms are {paradigm}")
     res = collate(words, punc, paradigm)
     print(res)
